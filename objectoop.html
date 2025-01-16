@@ -57,6 +57,21 @@ waarde van een kenmerk is een cel
 	dier2.ietseten("shoarma");
 	dier3.ietseten("kinoa");
 	
-
-
+	let honden = [dier1, dier2, dier3];
+	function tekenlijst(){
+		let eindstring = "<hr><div>";
+		for(let x=0; x < honden.length; x++){
+			eindstring += `
+				<div>
+					<h1>${honden[x].ras}</h1>
+					<h2>${honden[x].eerstebaasje}</h2>
+					<h3>${honden[x].aantalpootjes}</h3>
+				</div>
+			`;
+		}
+		eindstring += "</div>"
+		document.getElementById("uitvoer").innerHTML += eindstring;
+	}
 </script>
+<input type="button" onclick="tekenlijst()">
+<div id="uitvoer"></div>
