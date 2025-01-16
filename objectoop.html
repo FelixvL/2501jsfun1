@@ -35,7 +35,10 @@ waarde van een kenmerk is een cel
 			this.eerstebaasje = eb;
 		}
 		eten(){
-			console.log("lekker aan het eten");
+			console.log(this.ras+" is lekker aan het eten via "+this.eerstebaasje);
+		}
+		ietseten(hetgeenjeeet){
+			console.log(this.ras+" is lekker aan het "+ hetgeenjeeet +" eten via "+this.eerstebaasje);
 		}
 	}
 	let dier1 = new Dier("Bulldog");   // object
@@ -47,7 +50,12 @@ waarde van een kenmerk is een cel
 	console.log(dier1);
 	console.log(dier2);
 	console.log(dier3);
-	
+	dier1.eten();
+	dier2.eten();
+	dier3.eten();
+	dier1.ietseten("spaghetti");
+	dier2.ietseten("shoarma");
+	dier3.ietseten("kinoa");
 	
 
 
