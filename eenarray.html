@@ -1,7 +1,7 @@
 functies
 1 function naam(){}           function pointer naam zonder haakjes
-2 arrow functions =>
-3 anonieme functies
+2 () => {console.log("yes");}				arrow functions =>
+3 function (){}                      anonieme functies   
 
 
 <script>
@@ -25,7 +25,8 @@ functies
 
 	function start(){
 		let lijst = [1,5,3];
-		lijst.forEach(eigenfunctie);
+		//lijst.forEach(eigenfunctie);
+		lijst.forEach(function (yy){  console.log("in de anonieme functie",yy);  });
 		console.log(lijst);
 
 	}
