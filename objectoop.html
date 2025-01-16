@@ -7,55 +7,25 @@
 	}
 </style>
 <script>
-
-	let vasteklant;
-	let vasteKlant;
-	let vaste_Klant;
-	let diepte 			= 	2500	;
-	let verstelhoogte 	= 	32000	;
-	class Voedsel{
-		gewicht;
-	}
-
-	class Drinken{
-		constructor(){
-			this.gewicht;
-		}
-	}
-
 	class Dier{   //klasse
 		ras;			// field
 		eerstebaasje;
 		aantalpootjes = 4;
 		constructor(hetras, eb = "frits"){
-			//this.staartlengte;   // field
 			this.ras = hetras;
 			this.eerstebaasje = eb;
 		}
 		eten(){
 			console.log(this.ras+" is lekker aan het eten via "+this.eerstebaasje);
 		}
-		ietseten(hetgeenjeeet){
-			console.log(this.ras+" is lekker aan het "+ hetgeenjeeet +" eten via "+this.eerstebaasje);
-		}
 	}
 	let dier1 = new Dier("Bulldog");   // object
 	dier1.eerstebaasje = "joost";
-//	dier1.ras = "Bulldog";
 	let dier2 = new Dier("Herder","Ronald");
 	let dier3 = new Dier("Chiwawa");
-	//dier2.eerstebaasje = "Ronald";
-	console.log(dier1);
-	console.log(dier2);
-	console.log(dier3);
-	dier1.eten();
-	dier2.eten();
-	dier3.eten();
-	dier1.ietseten("spaghetti");
-	dier2.ietseten("shoarma");
-	dier3.ietseten("kinoa");
 	
 	let honden = [dier1, dier2, dier3];
+
 	function tekenlijst(){
 		document.getElementById("uitvoer").innerHTML = "";
 		let eindstring = "<hr><div>"                     ;
@@ -74,3 +44,6 @@
 </script>
 <input type="button" onclick="tekenlijst()">
 <div id="uitvoer"></div>
+
+<hr>
+<h1>formulier</h1>
