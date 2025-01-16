@@ -19,22 +19,35 @@ klassificeren
 klasse - blauwdruk - ovenschaal - cakevorm - bouwtekening   1     kenmerk
 object - fysiekding - lasagna   -  cakeje   - huis         oneindig veel  waarde van het kenmerk
 
+ORM object relational mapping     database      objecten
+klasse tabel
+object rij
+kenmerk kolom
+waarde van een kenmerk is een cel
 <script>
 	class Dier{   //klasse
-		ras;
-		constructor(){
-			this.staartlengte;   // field
-
+		ras;			// field
+		eerstebaasje;
+		aantalpootjes = 4;
+		constructor(hetras, eb = "frits"){
+			//this.staartlengte;   // field
+			this.ras = hetras;
+			this.eerstebaasje = eb;
 		}
-
+		eten(){
+			console.log("lekker aan het eten");
+		}
 	}
-
-	let dier1 = new Dier();   // object
-	dier1.staartlengte = 25;
-	dier1.ras = "Bulldog";
+	let dier1 = new Dier("Bulldog");   // object
+	dier1.eerstebaasje = "joost";
+//	dier1.ras = "Bulldog";
+	let dier2 = new Dier("Herder","Ronald");
+	let dier3 = new Dier("Chiwawa");
+	//dier2.eerstebaasje = "Ronald";
+	console.log(dier1);
+	console.log(dier2);
+	console.log(dier3);
 	
-	console.log(dier1.staartlengte);
-	console.log(dier1.ras);
 	
 
 
