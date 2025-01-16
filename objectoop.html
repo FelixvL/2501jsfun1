@@ -5,6 +5,9 @@
 		color:yellow;
 		padding:4px;
 	}
+	div{
+		margin:5px;
+	}
 </style>
 <script>
 	class Dier{   //klasse
@@ -41,9 +44,38 @@
 		eindstring += "</div>";
 		document.getElementById("uitvoer").innerHTML += eindstring;
 	}
+	function controle(nieuwebaas){
+		honden.forEach((dehond)=>{
+			if(dehond.eerstebaasje == nieuwebaas){
+				alert("bestaat al");
+			}
+		})
+	}
+	function hondtoevoegen(){
+		let baasje = document.getElementById("baasjeinvoer").value;
+		controle(baasje);
+		let rashond = document.getElementById("rasinvoer").value;
+		console.log("doet", baasje, rashond);
+		let tijdelijkehond = new Dier(rashond);
+		tijdelijkehond.eerstebaasje = baasje;
+		console.log(tijdelijkehond);
+		console.log(honden);
+		honden.push(tijdelijkehond);
+		console.log(honden);
+		tekenlijst();
+	}
 </script>
-<input type="button" onclick="tekenlijst()">
+<input type="button" onclick="tekenlijst()" value="toonallehonden">
+<h1>formulier</h1>
+<div>
+	Baasje: <input id="baasjeinvoer">
+</div>
+<div>
+	Ras:<input id="rasinvoer">
+</div>
+<div>
+<button onclick="hondtoevoegen()">VoegToe</button>
+</div>
 <div id="uitvoer"></div>
 
 <hr>
-<h1>formulier</h1>
