@@ -1,29 +1,4 @@
-oop
 
-De succesvolle manier van programmeurs
-om de wereld zoals wij als mensen die waarnemen
-om te zetten in broncode
-
-procedureel programmeren 47
-object oriented programming 80 90 java C#
-****stateless programmeren BIGDATA IOT   14
-python java c# c++ ts php javascript ES6
-
-
-klassificeren
- --- kenmerk
-
- een kenmerk van een mens is dat hij een voornaam heeft.   -- alle leden
- een waarde van een kenmerk van dat mens is dat hij johan heet -- betrekking op maar 1 lid
-
-klasse - blauwdruk - ovenschaal - cakevorm - bouwtekening   1     kenmerk
-object - fysiekding - lasagna   -  cakeje   - huis         oneindig veel  waarde van het kenmerk
-
-ORM object relational mapping     database      objecten
-klasse tabel
-object rij
-kenmerk kolom
-waarde van een kenmerk is een cel
 <style>
 	.bijzonder{
 		background-color: red;
@@ -32,6 +7,22 @@ waarde van een kenmerk is een cel
 	}
 </style>
 <script>
+
+	let vasteklant;
+	let vasteKlant;
+	let vaste_Klant;
+	let diepte 			= 	2500	;
+	let verstelhoogte 	= 	32000	;
+	class Voedsel{
+		gewicht;
+	}
+
+	class Drinken{
+		constructor(){
+			this.gewicht;
+		}
+	}
+
 	class Dier{   //klasse
 		ras;			// field
 		eerstebaasje;
@@ -67,7 +58,7 @@ waarde van een kenmerk is een cel
 	let honden = [dier1, dier2, dier3];
 	function tekenlijst(){
 		document.getElementById("uitvoer").innerHTML = "";
-		let eindstring = "<hr><div>";
+		let eindstring = "<hr><div>"                     ;
 		for(let x=0; x < honden.length; x++){
 			eindstring += `
 				<div>
@@ -77,7 +68,7 @@ waarde van een kenmerk is een cel
 				</div>
 			`;
 		}
-		eindstring += "</div>"
+		eindstring += "</div>";
 		document.getElementById("uitvoer").innerHTML += eindstring;
 	}
 </script>
