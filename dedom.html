@@ -1,13 +1,24 @@
-Document Object Model
-<script>
-	function zelfverzinnen(){
-		let mijelem = document.getElementById("mijninvoer").value;
-		console.log(mijelem);
-		document.getElementById("uitkomst").innerHTML = "Hallo " + mijelem
-	}
 
+<script>
+	function welkomopfeestje(){
+		let deDOM = document.getElementsByTagName("html");
+		console.log(deDOM)
+		let x = document.getElementsByTagName("html");
+		console.log(document.getElementById("welkomsbericht"));
+		console.log(document.getElementById("welkomsbericht").baseURI);
+		let naam = document.getElementById("naaminvoer").value;
+		if(naam == "joost" || naam == "Joost"){
+			document.getElementById("welkomsbericht").innerHTML = "Niet welkom "+naam;
+			document.getElementById("welkomsbericht").style.backgroundColor = "red";
+		}else{
+			document.getElementById("welkomsbericht").innerHTML = "Welkom "+naam;
+			document.getElementById("welkomsbericht").style.backgroundColor = "green";
+
+		}
+	}
 </script>
-<br><input type="text" id="mijninvoer" value="qqlq">
-<br>
-<input type="button" value="klik mij" onclick="zelfverzinnen()">
-<br><div id="uitkomst"></div>
+
+
+<input id="naaminvoer">
+<button onclick="welkomopfeestje()">Klik hier</button>
+<h1 id="welkomsbericht"></h1>
