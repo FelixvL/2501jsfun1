@@ -24,6 +24,13 @@ klasse tabel
 object rij
 kenmerk kolom
 waarde van een kenmerk is een cel
+<style>
+	.bijzonder{
+		background-color: red;
+		color:yellow;
+		padding:4px;
+	}
+</style>
 <script>
 	class Dier{   //klasse
 		ras;			// field
@@ -59,12 +66,13 @@ waarde van een kenmerk is een cel
 	
 	let honden = [dier1, dier2, dier3];
 	function tekenlijst(){
+		document.getElementById("uitvoer").innerHTML = "";
 		let eindstring = "<hr><div>";
 		for(let x=0; x < honden.length; x++){
 			eindstring += `
 				<div>
-					<h1>${honden[x].ras}</h1>
-					<h2>${honden[x].eerstebaasje}</h2>
+					<span class="bijzonder">${honden[x].ras}</span> -<br>
+					<span>${honden[x].eerstebaasje}</span>
 					<h3>${honden[x].aantalpootjes}</h3>
 				</div>
 			`;
